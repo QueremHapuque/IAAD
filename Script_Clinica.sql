@@ -12,7 +12,7 @@ create table Clinica(
 	CodCli CHAR(3) NOT NULL,
 	NomeCli VARCHAR (25),
 	Endereco VARCHAR (40),
-    Telefone VARCHAR (11),
+    Telefone VARCHAR (10),
     Email VARCHAR (25),
 	PRIMARY KEY(CodCli),
     UNIQUE(Email));
