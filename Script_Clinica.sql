@@ -49,7 +49,7 @@ create table AgendaConsulta(
 create table Especialidade(
 	CodEspec CHAR(3) NOT NULL,
 	NomeEspec VARCHAR(25),
-    Descricao VARCHAR (50) NOT NULL,
+    Descricao VARCHAR (70) NOT NULL,
 	PRIMARY KEY(CodEspec));
 
 -- Aplicando a restrição de integridade referencial (chaves estrangeiras - FK)
