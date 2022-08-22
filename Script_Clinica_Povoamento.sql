@@ -55,7 +55,7 @@ insert into AgendaConsulta values
 
 insert into Especialidade values
 	('301', 'Cardiologia', 'Cuida da saude do coracao'),
-    ('302', 'Ortopedia', 'Cuida da saude dos ossos~'),
+    ('302', 'Ortopedia', 'Cuida da saude dos ossos'),
     ('303', 'Fisioterapia', 'Restabelece pacientes que apresentam problemas de movimentacao'),
     ('304', 'Dermatologia', 'Cuida da pele'),
     ('305', 'Gastroenterologia', 'Cuida da saude das vias urinarias e do sistema reprodutor do homem'),
