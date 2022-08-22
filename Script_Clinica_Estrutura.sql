@@ -53,7 +53,7 @@ create table AgendaConsulta(
  	PRIMARY KEY(CodEspec));
 
 -- Aplicando a restrição de integridade referencial (chaves estrangeiras - FK)
-alter table Medico ADD FOREIGN KEY(CodEspec) REFERENCES Especialidade(CodEspec) ON UPDATE CASCADE;
 alter table Medico ADD FOREIGN KEY(CodEspec) REFERENCES Especialidade(CodEspec) ON DELETE CASCADE;
+alter table Medico ADD FOREIGN KEY(CodEspec) REFERENCES Especialidade(CodEspec) ON UPDATE CASCADE;
 alter table AgendaConsulta ADD FOREIGN KEY(CpfPaciente) REFERENCES Paciente(CpfPaciente) ON DELETE RESTRICT;
 commit;
