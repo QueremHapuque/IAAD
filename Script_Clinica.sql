@@ -51,7 +51,7 @@ create table AgendaConsulta(
  	NomeEspec VARCHAR(25),
     Descricao VARCHAR (70) NOT NULL,
  	PRIMARY KEY(CodEspec));
-	
+    
 -- populando/carregando as tabelas do banco de dados
 insert into Clinica values
 	('101', 'PetLove', 'Rua das Flores', '8728822105', 'petlove@mail.com'),
@@ -88,11 +88,11 @@ insert into Paciente values
 
 insert into ClinicaMedico values
 	('101', '205', '2022-03-07', 40.0),
-    ('101', '210', '2012-09-20', 18.5),
+    ('101', '209', '2012-09-20', 18.5),
     ('102', '202', '2016-12-06', 27.6),
     ('102', '203', '2017-05-14', 45.0),
     ('103', '201', '2014-11-27', 35.0),
-    ('103', '207', '2018-08-12', 30.0),
+    ('103', '206', '2018-08-12', 30.0),
     ('103', '208', '2020-11-17', 32.5),
     ('104', '209', '2009-05-08', 25.0),
     ('104', '204', '2004-03-15', 20.0),
@@ -109,7 +109,7 @@ insert into AgendaConsulta values
 
 insert into Especialidade values
 	('301', 'Cardiologia', 'Cuida da saude do coracao'),
-    ('302', 'Ortopedia', 'Cuida da saude dos ossos~'),
+    ('302', 'Ortopedia', 'Cuida da saude dos ossos'),
     ('303', 'Fisioterapia', 'Restabelece pacientes que apresentam problemas de movimentacao'),
     ('304', 'Dermatologia', 'Cuida da pele'),
     ('305', 'Gastroenterologia', 'Cuida da saude das vias urinarias e do sistema reprodutor do homem'),
@@ -117,7 +117,6 @@ insert into Especialidade values
     ('307', 'Oncologia', 'Estuda e trata os diversos tipos de câncer');
 
 -- Aplicando a restrição de integridade referencial (chaves estrangeiras - FK)
-alter table Medico ADD FOREIGN KEY(CodEspec) REFERENCES Especialidade(CodEspec) ON UPDATE CASCADE;
-alter table Medico ADD FOREIGN KEY(CodEspec) REFERENCES Especialidade(CodEspec) ON DELETE CASCADE;
+alter table Medico ADD FOREIGN KEY(CodEspec) REFERENCES Especialidade(CodEspec) ON DELETE CASCADE ON UPDATE CASCADE;
 alter table AgendaConsulta ADD FOREIGN KEY(CpfPaciente) REFERENCES Paciente(CpfPaciente) ON DELETE RESTRICT;
 commit;
