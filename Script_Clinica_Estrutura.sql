@@ -36,7 +36,7 @@ create table Paciente(
     UNIQUE(Email));
 create table ClinicaMedico(
 	CodCli CHAR(3) NOT NULL,
-	CodMed CHAR(3) NOT NULL,
+	CodMed CHAR(3),
     DataIngresso DATE NOT NULL,
     CargaHorariaSemanal DECIMAL(3,1),
 	PRIMARY KEY(CodCli, CodMed));
